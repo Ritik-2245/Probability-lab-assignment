@@ -16,15 +16,15 @@ def func():
         plot.plot_graph()
     
     elif x==2:
-        while True:
-            a=int(input('enter the value of a -'))
-            b=int(input('enter the value of b -'))
-            if b<=a:
-                print('enter a valid value of a and b')
-            else:
-                break
+        print('enter the range of random variables on number line')
+        a,b=map(int,input().strip().split())
+        
+        if b<=a:
+            a,b=b,a
+        
         plot=Uniform.Uniform(a=a,b=b)
         plot.plot_graph()
+            
     
     elif x==3:
         while True:
